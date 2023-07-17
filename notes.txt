@@ -13,3 +13,12 @@ Navigate to the main package directory that contains your setup.py and setup.cfg
 ## What is a pyproject.toml file used for? 
 ## Python comes along with an internal set of tools that are used to build and 
 ## distribute Python packages. This includes some modules you may have seen before such ## as setuptools and wheel. The pyproject.toml file gives you a way to specify which ##versions of the tools that are used to build your Python package. For example, if  ## ## your package needs to be built using a specific version of setup tools, then you can ##specify that in your pyproject.toml file.
+
+
+tox makes it easy to:
+
+Test against different versions of Python (which would have alerted Kyle that the library hadn’t been tested against his install version).
+Test against different dependency versions
+Capture and run setup steps/ad hoc commands (which Kyle could have made a mistake on / not known about)
+Isolate environment variables - By design, tox does not pass any evars from the system. Instead you are asked to explicitly declare them (which would have alerted Kyle to any environment variable requirements).
+Do all the above across Windows / macOS / Linux (which would have saved Kyle if the issue had been due to the OS)
