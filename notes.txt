@@ -22,3 +22,9 @@ Test against different dependency versions
 Capture and run setup steps/ad hoc commands (which Kyle could have made a mistake on / not known about)
 Isolate environment variables - By design, tox does not pass any evars from the system. Instead you are asked to explicitly declare them (which would have alerted Kyle to any environment variable requirements).
 Do all the above across Windows / macOS / Linux (which would have saved Kyle if the issue had been due to the OS)
+
+# Important
+1. Create project structure with template
+2. Setup of setup.cfg, setup.py, tox.ini, pyproject.toml, init_setup.sh
+3. In terminal use git bash..as init_setup.sh works with it bash init_setup.sh
+4. 
